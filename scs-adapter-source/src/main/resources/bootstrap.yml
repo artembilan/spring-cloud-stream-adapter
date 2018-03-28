@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: stream-source-demo
+  cloud:
+    config:
+      enabled: false

@@ -1,0 +1,15 @@
+server:
+  port: 8088
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          headers: replyChannel,localTopic,sourceApp
+          zk-connection-timeout: 60000
+          zk-session-timeout: 60000
+      default:
+        contentType: application/json
+        consumer:
+          requeueRejected: false
+          maxAttempts: 1
